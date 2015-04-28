@@ -54,23 +54,6 @@ public class Robot extends SampleRobot {
   public void operatorControl() {
     while (isOperatorControl() && isEnabled()) {
 
-    	double joyMagnitude;
-    	double moddedGyroAngle;
-    	double moddedJoyMagnitude;
-    /*	if((gyro.getAngle() > 360) || (gyro.getAngle() < 0)){
-    		gyro.reset();
-    	}
-    	joyMagnitude = driveJoy.getMagnitude();
-    	moddedGyroAngle = (gyro.getAngle() + 180) * (1024/360);
-    	moddedJoyMagnitude = ((joyMagnitude * 1023) + 512);
-    	
-    	trueSwerveMode = SmartDashboard.getBoolean("Swerve Mode Enabled", true);
-    	if(trueSwerveMode = false){
-    	FLsteer.set(moddedJoyMagnitude);
-    	RLsteer.set(moddedJoyMagnitude);
-    	FRsteer.set(moddedJoyMagnitude);
-    	RRsteer.set(moddedJoyMagnitude);
-*/
     	double fwd;
     	double str;
     	double rcw;
