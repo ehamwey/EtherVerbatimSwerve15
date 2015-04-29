@@ -5,6 +5,7 @@ import edu.wpi.first.wpilibj.Gyro;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.CANTalon;
 import edu.wpi.first.wpilibj.SampleRobot;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 /**
  * This is a short sample program demonstrating how to use the Talon SRX over
@@ -44,7 +45,8 @@ public class Robot extends SampleRobot {
       RLdrive.setFeedbackDevice(CANTalon.FeedbackDevice.QuadEncoder);
       FRdrive.setFeedbackDevice(CANTalon.FeedbackDevice.QuadEncoder);
       RRdrive.setFeedbackDevice(CANTalon.FeedbackDevice.QuadEncoder);
-
+      
+      
       FLsteer.setPID(1, 0, 0);
       RLsteer.setPID(1, 0, 0);
       FRsteer.setPID(1, 0, 0);
@@ -91,7 +93,7 @@ public class Robot extends SampleRobot {
     	fls = Math.sqrt(b*b + d*d);
     	rls = Math.sqrt(a*a + d*d);
     	rrs = Math.sqrt(a*a + c*c);
-    	
+    	SmartDashboard.get
     	fra = Math.atan2(b,c) * 180/Math.PI;
     	fla = Math.atan2(b,d) * 180/Math.PI;
     	rra = Math.atan2(a,d) * 180/Math.PI;
