@@ -1,11 +1,7 @@
 package org.usfirst.frc.team3467.robot;
-
+ 
 import javax.swing.JOptionPane;
 
-import de.hardcode.jxinput.Axis;
-import de.hardcode.jxinput.JXInputDevice;
-import de.hardcode.jxinput.directinput.DirectInputDevice;
-import de.hardcode.jxinput.test.AxisListener;
 
 public class Simulator {
 /**
@@ -15,11 +11,8 @@ public class Simulator {
  * @param args
  * @author Emile Hamwey
  */
-	static JXInputDevice joystick;
-	static DirectInputDevice logiJoystick; 
-	
 	public Simulator(){
-	logiJoystick = new DirectInputDevice(0); 
+
 	}
 	public static void main(String[] args) {
 	   	double fwd;

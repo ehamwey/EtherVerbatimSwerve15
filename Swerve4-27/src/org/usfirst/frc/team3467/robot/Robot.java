@@ -27,11 +27,12 @@ public class Robot extends SampleRobot {
       RRdrive = new CANTalon(7);
       RRsteer = new CANTalon(8);
       driveJoy = new Joystick(1);
-
-      FLdrive.changeControlMode(CANTalon.ControlMode.Voltage);
-      RLdrive.changeControlMode(CANTalon.ControlMode.Voltage);
-      FRdrive.changeControlMode(CANTalon.ControlMode.Voltage);
-      RRdrive.changeControlMode(CANTalon.ControlMode.Voltage);
+      gyro = new Gyro(0);// gyro on RoboRio analog input port 0
+      
+      FLdrive.changeControlMode(CANTalon.ControlMode.PercentVbus);
+      RLdrive.changeControlMode(CANTalon.ControlMode.PercentVbus);
+      FRdrive.changeControlMode(CANTalon.ControlMode.PercentVbus);
+      RRdrive.changeControlMode(CANTalon.ControlMode.PercentVbus);
       FLsteer.changeControlMode(CANTalon.ControlMode.Position);
       RLsteer.changeControlMode(CANTalon.ControlMode.Position);
       FRsteer.changeControlMode(CANTalon.ControlMode.Position);
@@ -126,11 +127,11 @@ public class Robot extends SampleRobot {
     		rls/=max;
     	}
     	//Wheel speeds are now 0-1. Not -1 to +1.
-    	//Multiply wheel speeds by 12 for voltage control mode
-    	FRdrive.set(frs*12);
-    	FLdrive.set(fls*12);
-    	RRdrive.set(rrs*12);
-    	RLdrive.set(rls*12);
+    	//Multiply wheel speeds by 1 for PercentVBus control mode
+    	FRdrive.set(frs);
+    	FLdrive.set(fls);
+    	RRdrive.set(rrs);
+    	RLdrive.set(rls);
     }
     }
   }
